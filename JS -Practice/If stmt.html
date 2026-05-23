@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If stmt</title>
+</head>
+<body>
+    <h1>Check vote Eligibility</h1><br>
+    <label for="age">Enter Age: </label>
+    <input type="text" id="myText"><br><br>
+    <button id="myBtn">Submit</button>
+    <h4 id="result"></h4>
+
+    <script>
+        
+        let result = document.getElementById("result");
+        let myBtn = document.getElementById("myBtn");
+
+        myBtn.onclick = function(){
+            let age = document.getElementById("myText").value;
+
+            let isMajor = true;
+
+            if(age >= 18){
+                result.textContent = "Your eligible for vote!";
+                if(age >= 18){
+                   
+                    result.textContent = "Your major that's why also eligible for vote!";
+                }
+                else{
+                    result.textContent = "Your minor that's why not eligible for vote!";
+                    
+                }
+            }
+            else if(age <= 0){
+                result.textContent = "Your not born at all.";
+                
+            }
+            else{
+                result.textContent = "Your not eligible for vote!";
+            }      
+        }
+    </script>
+</body>
+</html>

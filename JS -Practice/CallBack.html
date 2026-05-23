@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBcak in js</title>
+</head>
+<body>
+    <h1 id="myH1"></h1>
+    <script>
+        
+        function sum(callback, x, y){
+            let result = x + y;
+            callback(result);
+        }
+
+        function displayPage(result){
+            document.getElementById("myH1").textContent = result;
+        }
+
+        sum(displayPage, 9, 2); // callback = displaySum
+
+
+    </script>
+</body>
+</html>

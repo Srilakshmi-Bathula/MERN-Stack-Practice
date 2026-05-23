@@ -1,0 +1,24 @@
+h1::first-letter{
+    background-color: red;
+    font-size: 50px;
+}
+p::first-line{
+    background-color: yellow;
+
+}
+p::selection{
+    color:blue;
+    
+}
+ul li::before{
+    content: ✔️;
+}
+#apple ::after{
+    content: 🍎;
+}
+#banana::after{
+    content: 🍌;
+}
+#orange::after{
+    content:🍊;
+}

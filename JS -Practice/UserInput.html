@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserInput</title>
+    <link rel="stylesheet" href="userinput.css">
+</head>
+<body>
+    <h1 id="myH1">User Input in JS</h1>
+    <label for="username">User Name:</label>
+    <input type="text" id="myText"> <br><br>
+    <button id="myBtn">Submit</button>
+    <h3 id="myH3">UserName Will Display Here!</h3>
+
+    <script>
+        /*
+            How to accept user input?
+
+            1. EASY WAY = window prompt
+            2. PROFESSIONAL WAY = HTML Textbox
+        */
+        document.getElementById("myBtn").onclick = function(){
+            let username = document.getElementById("myText").value;
+            document.getElementById("myH1").textContent = `Hello ${username}!`;
+            document.getElementById("myH3").textContent = `User Name:  ${username}`;
+
+        }
+    </script>
+</body>
+</html>

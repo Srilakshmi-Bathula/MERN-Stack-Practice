@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            NodeList
+        </title>
+        <link rel="stylesheet" href="NodeList.css">
+    </head>
+    <body>
+        <button class="myButtons">Button1</button><br>
+        <button class="myButtons">Button2</button><br>
+        <button class="myButtons">Button3</button><br>
+        <button class="myButtons">Button4</button><br>
+
+        <script>
+            let buttons = document.querySelectorAll(".myButtons");
+
+            // buttons.forEach(button => {
+            // button.style.backgroundColor = "green";
+            // button.textContent += "😄";
+
+            // });
+
+            //Click event listener
+            buttons.forEach(button => {
+                button.addEventListener("click", event => {
+                    event.target.style.backgroundColor = "yellow";
+                });
+
+            });
+
+             //MOUSEOVER + MOUSEOUT eventlistners
+            // buttons.forEach(button => {
+            //     button.addEventListener("mouseover", event => {
+            //         event.target.style.backgroundColor = "blue";
+            //     });
+
+            // });
+
+            // buttons.forEach(button => {
+            //     button.addEventListener("mouseout", event => {
+            //         event.target.style.backgroundColor = "green";
+            //     });
+
+            // });
+
+            // ADD NEW ELEMENT 
+            // const newButton = document.createElement("button");
+            // newButton.textContent = "Button 5";
+            // newButton.classList = "myButtons";
+
+            // document.body.append(newButton);
+
+            //REMOVE AN ELEMENT
+            buttons.forEach(button => {
+                button.addEventListener("click", event => {
+                    event.target.remove();
+                    buttons = document.querySelectorAll(".myButtons");
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Converter</title>
+    <link rel="stylesheet" href="tempconvert.css">
+</head>
+<body>
+    <form action="#">
+    <h1>Temperature conversion: </h1>
+    <input type="number" id ="textBox"  value="0"><br><br>
+
+    <input type="radio" id="toFahrenheit" name="unit">
+    <label for="toFahrenheit">Celsius ➡️ Fohrenheit </label><br>
+
+    <input type="radio" id="toCelsius" name="unit">
+    <label for="toCelsius">Fohrenheit ➡️ Celsius </label><br><br>
+
+    <button type="button" onclick="convert()">Submit</button>
+
+    <p id="result"></p>
+    </form>
+
+
+    <script>
+
+        const textBox = document.getElementById("textBox");
+        const toFahrenheit = document.getElementById("toFahrenheit");
+        const toCelsius = document.getElementById("toCelsius");
+        const result = document.getElementById("result");
+        let temp;
+
+        function convert(){
+
+            if(toFahrenheit.checked){
+                temp = Number(textBox.value);
+                temp = temp + 9 / 5 + 32;
+                result.textContent =  temp.toFixed(1) + "F 🌞";
+            }
+            else if(toCelsius.checked){
+                temp = Number(textBox.value);
+                temp = temp - (32 *(5/9));
+                result.textContent = temp.toFixed(1) + "C 🌞";
+            }else{
+                result.textContent = "Select a unit";
+            }
+
+        }
+    </script>
+
+</body>
+</html>

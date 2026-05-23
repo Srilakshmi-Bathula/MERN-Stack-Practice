@@ -1,0 +1,18 @@
+body{
+    background-color: slategray;
+}
+h1{
+    color: red;
+}
+#p1{
+    color: aqua;
+}
+#p2{
+    color: rgba(red, green, rgb(19, 19, 166), alpha);
+}
+#p3{
+    color: #3c0cda;
+}
+#p4{
+    color: hsl(hsl(299, 89%, 44%));
+}

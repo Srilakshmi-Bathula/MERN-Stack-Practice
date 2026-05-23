@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <button id="start" onclick="startTimer()">START</button>
+    <button id="clear" onclick="clearTimer()">CLEAR</button>
+    <h3 id="rstart"></h3>
+    <h3 id="rclear"></h3>
+
+    <script>
+
+        let timeOutId;
+
+        function startTimer(){
+            timeOutId = setTimeout(() => document.getElementById("start").textContent = "Hello" , 3000);
+            document.getElementById("rstart").textContent = "STARTED";
+
+        }
+        function clearTimer(){
+            clearTimeout(timeOutId);
+            document.getElementById("rclear").textContent = "CLEARED";
+        }
+    </script>
+</body>
+</html>

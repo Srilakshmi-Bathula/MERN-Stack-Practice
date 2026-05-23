@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+#myH1{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(60, 58, 58);
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid;
+    border-radius: 50px;
+    background-color: white;
+
+}
+#display{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(84, 81, 81);
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 25px;
+}
+#controles button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#startBtn{
+    background-color: rgb(47, 255, 68);
+}
+#startBtn:hover{
+    background-color: rgb(47, 255, 68);
+}
+#stopBtn{
+    background-color: rgb(255, 98, 0);
+}
+#stopBtn:hover{
+    background-color: rgb(255, 0, 0);
+}
+#resetBtn{
+    background-color: rgb(135, 218, 235);
+}
+#resetBtn:hover{
+    background-color: blue;
+}

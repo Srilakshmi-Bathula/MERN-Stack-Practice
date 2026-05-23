@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const in JS</title>
+</head>
+<body>
+    <h1>Const Keyword in JS</h1><br>
+    <h3>Circle Circumerence</h3>
+    <label for="radius">Enter Radius: </label>
+    <input type="text" id="myText"> <br><br>
+    <button id="myBtn">Submit</button>
+    <h3 id="result"></h3>
+
+
+    <script>
+        //const = a variable that cannot be change
+
+        const PI = 3.14;
+        let circumerence;
+
+        document.getElementById("myBtn").onclick = function(){
+
+        let radius = document.getElementById("myText").value;
+        circumerence = Math.floor(2 * PI * radius);
+        
+        document.getElementById("result").textContent = `Circumerence : ${circumerence}`;
+
+       }
+    </script>
+</body>
+</html>

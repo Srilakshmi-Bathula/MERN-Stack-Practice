@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+}
+
+/* ---------------- To apply all 'P' tags --------------*/
+/*p{
+    color: white;
+}
+
+/* ---------------- ID: To apply to specific 'P' tags --------------*/
+
+ /* #p1{
+    color: orange;
+}
+ */
+
+ /* ---------------- Class: To apply to a group of  'P' tags --------------*/
+
+ /*
+
+ */
+ .para{
+    color: aqua;
+ }

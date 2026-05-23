@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>
+            classList
+        </title>
+        <link rel="stylesheet" href="classList.css">
+    </head>
+    <body>
+        <!--<button id="myButton">myButton</button>-->
+        <!--<h1 id="myH1">Hello</h1>
+        <button id="myButton">My Button</button> -->
+
+        <button class="myButtons">Button 1</button><br>
+        <button class="myButtons">Button 2</button><br>
+        <button class="myButtons">Button 3</button><br>
+        <button class="myButtons">Button 4</button>
+
+
+        <script>
+            // const myButton = document.getElementById("myButton");
+
+            //  myButton.classList.add("enabled");
+            //  myButton.classList.add("disabled");
+             //myButton.add("hover");
+            //myButton.remove();
+
+            // myButton.addEventListener("mouseover", event =>{
+            //     event.target.classList.add("hover");
+            // })
+            // myButton.addEventListener("mouseout", event =>{
+            //     event.target.classList.remove("hover");
+            // })
+
+            //  myButton.addEventListener("mouseover", event =>{
+            //     event.target.classList.toggle("hover");
+            // })
+            // myButton.addEventListener("mouseout", event =>{
+            //     event.target.classList.toggle("hover");
+            // })
+            // myButton.addEventListener("click", event =>{
+            //     event.target.classList.replace("enabled", "disabled");
+            // })
+
+            // myButton.addEventListener("click", event => {
+            //     if(event.target.classList.contains("disabled")){
+            //         event.target.textContent += "😡";
+            //     }
+            //     else{
+            //         event.target.classList.replace("enabled");
+            //     }
+            // })
+
+        // -------------------------------------------------------------------------
+
+        // const myH1 = document.getElementById("myH1");
+        // const myButton = document.getElementById("myButton");
+
+        // myH1.classList.add("enabled");
+        // myButton.classList.add("enabled");
+
+        // myH1.classList.add("disabled");
+        // myButton.classList.add("disabled");
+
+        // myH1.addEventListener("click", event => {
+        //      if(event.target.classList.contains("disabled")){
+        //         event.target.textContent += "😡";
+        //      }
+        //     else{
+        //         event.target.classList.replace("enabled", "disabled");
+        //     }
+        // })
+        // myButton.addEventListener("click", event => {
+        //      if(event.target.classList.contains("disabled")){
+        //         event.target.textContent += "😡";
+        //      }
+        //     else{
+        //         event.target.classList.replace("enabled", "disabled");
+        //     }
+        // })
+        // --------------------------------------------------------------------------------
+
+        let buttons = document.querySelectorAll(".myButtons");
+
+        buttons.forEach(button => {
+            button.classList.add("enabled");
+        });
+
+         buttons.forEach(button => {
+             button.classList.add("disabled");
+         });
+
+
+        buttons.forEach(button => {
+            button.addEventListener("mouseover", event => {
+                event.target.classList.toggle("hover");
+            })
+        });
+
+        buttons.forEach(button => {
+            button.addEventListener("mouseout", event => {
+                event.target.classList.toggle("hover");
+            })
+        });
+        
+        buttons.forEach(button => {
+            button.addEventListener("click", event => {
+            if(event.target.classList.contains("disabled")){
+                 event.target.textContent += "😡";
+              }
+             else{
+                 event.target.classList.replace("enabled", "disabled");
+             }
+         })
+        })
+
+
+
+
+
+        </script>
+    </body>
+</html>

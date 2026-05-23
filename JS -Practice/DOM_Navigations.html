@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigations</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li id="apple">apple</li>
+        <li id="mango">mango</li>
+        <li id="banana">banana</li>
+    </ul>
+    <ul id="vegetables">
+        <li id="carrot">carrot</li>
+        <li id="brinjal">brinjal</li>
+        <li id="tomato">tomato</li>
+    </ul>
+    <ul id="deserts">
+        <li>penuts</li>
+        <li>cherry</li>
+        <li>ice cream</li>
+    </ul>
+    
+    <script>
+        //------------firstElementChild-------------
+         const element = document.getElementById("fruits");
+        // const firstChild = element.firstElementChild;
+        // firstChild.style.backgroundColor = "yellow";
+
+         //------------lastElementChild-------------
+         //const lastChild = element.lastElementChild;
+         //lastChild.style.backgroundColor = "yellow";
+        // const ulElements = document.querySelectorAll("ul");
+        // ulElements.forEach(ulElement => {
+        //      const lastChild = ulElement.lastElementChild;
+        //      lastChild.style.backgroundColor = "yellow";
+        // })
+
+
+        //------------.nextElementSibling-------------
+        //  const nextSibling = element.nextElementSibling;
+        //  nextSibling.style.backgroundColor = "yellow";
+
+        //------------.previousElementSibling-------------
+        //  const prevSibling = element.previousElementSibling;
+        //  prevSibling.style.backgroundColor = "yellow";
+
+        //------------.parentElement-------------
+        // const perentEle = element.parentElement;
+        // perentEle.style.backgroundColor = "yellow";
+
+        //------------.children-------------
+        const children = element.children;
+        children.style.backgroundColor = "yellow";
+
+        Array.from(children).forEach(child => {
+            child.style.backgroundColor = "yellow";
+        })
+
+    </script>
+</body>
+</html>

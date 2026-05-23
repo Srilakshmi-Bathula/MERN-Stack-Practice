@@ -1,0 +1,19 @@
+[{
+    "name" : "Sri",
+    "age" : 20,
+    "isEmployed" :true,
+    "hobbies": ["Eating", "Sleeping"]
+},
+{
+    "name" : "Kavya",
+    "age" : 23,
+    "isEmployed" :false,
+    "hobbies": ["reading", "Sleeping"]
+},
+{
+    "name" : "Sravya",
+    "age" : 28,
+    "isEmployed" :false,
+    "hobbies": ["playing", "Sleeping"]
+}
+]

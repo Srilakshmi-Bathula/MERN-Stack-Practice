@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>event Listners</title>
+        <link rel="stylesheet" href="eventListners.css">
+    </head>
+    <body>
+        <button id="myButton">Hide</button>
+        <img id="myImage" src="Images/img1.jpg" alt="Image" width="400px">
+
+        <script>
+            const myButton = document.getElementById("myButton");
+            const myImage = document.getElementById("myImage");
+
+            myButton.addEventListener("click", event =>{
+                if(myImage.style.display == "none"){
+                    myImage.style.display = "block";
+                    myButton.style.display = "Hide";
+                }
+                else{
+                    myImage.style.display = "none";
+                    myButton.style.display = "Show";
+                }
+
+            })
+        </script>
+    </body>
+</html>

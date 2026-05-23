@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner & Remainder</title>
+</head>
+<body>
+    <header>
+        <h1>Daily Planner & Remainder</h1>
+    </header>
+    
+    <main>
+        <section id="add-task">
+            <h2>Add New Task</h2>
+
+            <form action="#">
+
+                <p>
+                <label for="task-name">Task Description</label>
+                <input type="text" id="task-name" placeholder="Finish Project Report" required>
+                </p>
+
+                <p>
+                    <label for="task-time">Set Time</label>
+                    <input type="time" id="task-time" name="task-time" required>
+                </p>
+
+                <p>
+                    <label for="notes">Task Notes: </label>
+                    <textarea name="notes" id="notes" rows="3" placeholder="Add any specific details..."></textarea>
+                </p>
+
+                <button type="submit">Add Task to Agenda</button>
+
+            </form>
+        </section>
+
+            <hr>
+            <section id="today-agenda">
+                <h1>Today's Agenda</h1>
+
+                <ul>
+                    <li>
+                        <strong>09:00 AM:</strong>
+                        Team StandUp meeting
+                        <small>Notes: [Dont forget the slides!]</small>
+                    </li>
+
+                    <li>
+                        <strong>02:30 PM:</strong>
+                        Client Call
+                        <small>Notes: [Discuss Budget Review!]</small>
+                    </li>
+                </ul>
+
+                <p id="no-tasks-message" style="font-style: italic; color: gray;">
+                    No tasks scheduled yet for today. Add one above!
+
+                </p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Daily Planner App</p>
+    </footer>
+</body>
+</html>

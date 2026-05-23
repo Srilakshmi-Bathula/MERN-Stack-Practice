@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>event listners</title>
+        <link rel="stylesheet" href="keyEvents.css">
+    </head>
+    <body>
+        <div id="myBox">
+             😀
+        </div>
+
+
+        <script>
+            const mybox = document.getElementById("myBox");
+            
+
+            // document.addEventListener("keydown", (event) =>{
+            //     myBox.style.backgroundColor = "red";
+            //     myBox.textContent = "🤕";
+            // });
+            // document.addEventListener("keyup", (event) =>{
+            //     myBox.style.backgroundColor = "yellow";
+            //     myBox.textContent = "🤯";
+            // });
+            const moveAmount = 10;
+            const x = 0;
+            const y = 0;
+
+            document.addEventListener("keydown", (event) =>{
+            if(event.key.startWith("Arrow")){
+                switch(event.key){
+                    case "ArrowUp":
+                        y-= moveAmount;
+                        break;
+                    case "ArrowDown":
+                        y+= moveAmount;
+                        break;
+                    case "ArrowLeft":
+                        x-= moveAmount;
+                        break;
+                    case "ArrowLeft":
+                        x+= moveAmount;
+                        break;
+                }
+                myBox.style.top = `${y}px`;
+                myBox.style.left = `${x}px`;
+
+            }
+            });
+            
+
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop in js</title>
+</head>
+<body>
+    <h1>While Loop</h1>
+    <label for="username">Enter UserName : </label>
+    <input type="text" id="myuser"><br><br>
+    <label for="password">Enter Password : </label>
+    <input type="text" id="mypass">
+    <h3 id="result"></h3>
+    <button id="myBtn">Submit</button>
+
+    <script>
+        let loggedIn = false;
+        let myBtn = document.getElementById("myBtn");
+        let result = document.getElementById("result");
+
+        while(loggedIn){
+            myBtn.onclick = function(){
+                let username = document.getElementById("myuser").value;
+                let password = document.getElementById("mypass").value;
+                //document.getElementById("result").textContent = `UserName : ${username}` ;
+
+                if(username == "myUser" && password == "myPass"){
+                    loggedIn = true;
+                    result.textContent = `${username} are Logged In!` ;
+                }
+                else{
+                    result.textContent = `Invalid credentials ! Try again`; 
+                }
+            }
+        }
+    </script>
+</body>
+</html>

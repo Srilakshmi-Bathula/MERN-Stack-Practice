@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <h3 id="welcome-msg"></h3>
+       <script>
+        document.title = "My website";
+        //document.body.style.backgroundColor = "black";
+
+        const username ="Sri!";
+        const welcome_msg = document.getElementById("welcome-msg");
+
+        welcome_msg.textContent += username === "" ? `Guest` : username;
+
+       </script>
+    </body>
+</html>

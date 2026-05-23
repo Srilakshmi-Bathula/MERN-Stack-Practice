@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked</title>
+</head>
+<body>
+    <h1>Checked Property</h1>
+    <input type="checkbox" id="myCheckBox">
+    <label for="myCheckBox">Choose Payment: </label><br><br>
+
+    <input type="radio" name="rad" id="upiBtn" name="radioBtn">
+    <label for="upiBtn">UPI</label><br>
+    <input type="radio" name="rad" id="cardBtn" name="radioBtn">
+    <label for="cardBtn">Card</label><br>
+    <input type="radio" name="rad" id="otherBtn" name="radioBtn">
+    <label for="otherBtn">Other</label><br><br>
+    
+    <button id="myBtn" style="padding: 5px 15px;">Pay</button>
+
+    <h4 id="cResult"></h4>
+    <h4 id="rResult"></h4>
+
+
+    <script>
+        let myCheckBox = document.getElementById("myCheckBox");
+        let upiBtn = document.getElementById("upiBtn");
+        let cardBtn = document.getElementById("cardBtn");
+        let otherBtn = document.getElementById("otherBtn");
+        let  myBtn = document.getElementById("myBtn");
+        let  cResult  = document.getElementById("cResult");
+        let  rResult  = document.getElementById("rResult");
+        
+        myBtn.onclick = function(){
+            if(myCheckBox.checked){
+                 cResult.textContent = "Your choosed Online Payment";
+                 
+                 if(upiBtn.checked){
+                    rResult.textContent = "Your want to pay through UPI";
+                 }else if(cardBtn.checked){
+                    rResult.textContent = "Your want to pay through Card";
+                 }else if(otherBtn.checked){
+                    rResult.textContent = "Your want to pay through other payment option ";
+                 }
+            }else{
+                cResult.textContent = "Choose the payment option!"
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

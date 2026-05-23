@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Prg</title>
+    <link rel="stylesheet" href="counterprg.css">
+</head>
+<body>
+    <label for="count" id="countLabel">0</label>
+
+    <div class="BtnContainer">
+        <button id="increaseBtn" class="buttons">Increase</button>
+        <button id="reset" class="buttons">Reset</button>
+        <button id="decreaseBtn" class="buttons">Decrease</button>
+    </div>
+
+    <script>
+        const increaseBtn = document.getElementById("increaseBtn");
+        const reset = document.getElementById("reset");
+        const decreaseBtn = document.getElementById("decreaseBtn");
+        const countLabel = document.getElementById("countLabel");
+
+        let count = 0;
+
+        increaseBtn.onclick = function(){
+            count++;
+            countLabel.textContent = count;
+        }
+
+        decreaseBtn.onclick = function(){
+            count--;
+            countLabel.textContent = count;
+        }
+
+        reset.onclick = function(){
+            count = 0;
+            countLabel.textContent = count;
+        }
+    </script>
+</body>
+</html>

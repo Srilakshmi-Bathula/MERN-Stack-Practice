@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Generation</title>
+</head>
+<body style="text-align: center;">
+    <h1>Random Number Generator</h1><br>
+    <p>Click here!</p>
+    <button id="myBtn" style="padding: 10px 15px;">Generate</button>
+    <h3 id="result1"></h3>
+    <h3 id="result2"></h3>
+    <h3 id="result3"></h3>
+
+
+    <script>
+        let randomNum;
+        let max = 100;
+        let min = 0;
+
+        document.getElementById("myBtn").onclick = function(){
+            randomNum1 = Math.floor(Math.random()*(max - min)) + min;
+            randomNum2 = Math.floor(Math.random()*(max - min)) + min;
+            randomNum3 = Math.floor(Math.random()*(max - min)) + min;
+
+            document.getElementById("result1").textContent = `Random Num: ${randomNum1}`
+            document.getElementById("result2").textContent = `Random Num: ${randomNum2}`
+            document.getElementById("result3").textContent = `Random Num: ${randomNum3}`
+        }
+
+    </script>
+</body>
+</html>

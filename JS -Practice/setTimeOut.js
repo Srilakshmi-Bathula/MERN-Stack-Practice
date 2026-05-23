@@ -1,0 +1,5 @@
+/*
+setTimeOut : 
+
+            setTimeOut(callback, delay);
+*/

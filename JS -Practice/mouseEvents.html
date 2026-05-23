@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>event listners</title>
+        <link rel="stylesheet" href="styleeventLis.css">
+    </head>
+    <body>
+        <div id="myBox">
+            Click me 😀
+        </div>
+        <button id="myButton">Click Me</button>
+
+        <script>
+            const mybox = document.getElementById("myBox");
+            const myButton =  document.getElementById("myButton");
+            
+
+            // function changeColor(event){
+            //     event.target.style.backgroundColor = "red";
+            //     event.target.textContent = "OUCH 🤕";
+            // }
+
+            myButton.addEventListener("click", (event) =>{
+                myBox.style.backgroundColor = "red";
+                myBox.textContent = "OUCH 🤕";
+            });
+            myButton.addEventListener("mouseover", (event) =>{
+                myBox.style.backgroundColor = "yellow";
+                myBox.textContent = "Dont do it 🤯";
+            });
+            myButton.addEventListener("mouseout", (event) =>{
+                myBox.style.backgroundColor = "lightgreen";
+                myBox.textContent = " Click me 😀";
+            });
+        </script>
+    </body>
+</html>
