@@ -1,0 +1,67 @@
+// onChange = event handler used primarly with form elements.
+//             ex: <input>, <textarea>,<select>,<radio>
+//             Triggers a function every time the value of the input changes
+
+import React, {useState} from 'react';
+function OcEvent(){
+    const[name, setName] = useState("Guest"); // input tag
+    const[quantity, setQuantity] = useState(1); // input tag - type is number
+    const[comment, setComment] = useState(""); // textarea tag
+    const[payment, setPayment] = useState(""); // selection & option tags
+    const[shipping, setShipping] = useState(""); // radio button
+
+    function handleNameChange(event){
+        setName(event.target.value);
+    }
+    function handleQuantityChange(event){
+        setQuantity(event.target.value);
+    }
+    function handleCommentChange(event){
+        setComment(event.target.value);
+    }
+    function handlePaymentChange(event){
+        setPayment(event.target.value);
+    }
+    function handleShipingChange(event){
+        setShipping(event.target.value);
+    }
+
+
+    return(
+        <div>
+            <input value ={name} onChange={handleNameChange}/>
+            <p>Name : {name}</p>
+
+            <input value ={quantity} onChange={handleQuantityChange} type='number'/>
+            <p>Quantity : {quantity}</p>
+
+            <textarea value={comment} onChange={handleCommentChange} placeholder='"Enter delivery instruction'></textarea>
+            <p>Comment: {comment}</p>
+
+            <select value={payment} onChange={handlePaymentChange}>
+                <option value="">Select an option</option>
+                <option value="Visa">Visa</option>
+                <option value="gift">GiftCard</option>
+                <option value="mCard">Master Card</option>
+            </select>
+            <p>Payment : {payment}</p>
+
+            <label>
+                <input type="radio"  value="Pick Up"
+                       checked = {shipping == "Pick Up"} 
+                       onChange={handleShipingChange}
+                />
+                Pick Up
+            </label>
+            <label>
+                <input type="radio"  value="Delivery"
+                       checked = {shipping == "Delivery"} 
+                       onChange={handleShipingChange}
+                />
+                Delivery
+            </label>
+            <p>Shipping : {shipping}</p>
+    </div>
+    );
+}
+export default OcEvent;
